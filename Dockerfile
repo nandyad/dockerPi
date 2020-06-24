@@ -1,4 +1,4 @@
-# THIS WORKED ON RASPBIAN STRETCH PI4
+# THIS IS ON RASPBIAN STRETCH PI4
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
