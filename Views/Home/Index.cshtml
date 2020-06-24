@@ -1,0 +1,41 @@
+﻿@using ServerStatsx86
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment env
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ServerStats</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <br />
+    <h3>Running in Docker!</h3>
+    <br />
+    <table>
+        @if (env != null)
+        {
+            <tr><td>Environment Name</td><td><strong>@env.EnvironmentName</strong></td></tr>
+        }
+        <tr><td>Runtime Framework</td><td><strong>@GetType().Assembly.GetName().Version</strong></td></tr>
+        <tr><td>Application Name</td><td><strong>@GetType().Assembly.GetName().Name</strong></td></tr>
+        <tr><td>Application Ver</td><td><strong>@System.Reflection.Assembly.GetEntryAssembly().GetName().Version</strong></td></tr>
+        <tr><td>App Path</td><td><strong>@System.Reflection.Assembly.GetExecutingAssembly().CodeBase</strong></td></tr>
+        <tr><td>Operating System Windows</td><td><strong>@System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.Windows)</strong></td></tr>
+        <tr><td>Operating System Linux</td><td><strong>@System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.Linux)</strong></td></tr>
+        <tr><td>Operating System Other</td><td><strong>@System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.OSX)</strong></td></tr>
+        <tr><td>OS Description</td> <td><strong>@System.Runtime.InteropServices.RuntimeInformation.OSDescription</strong></td></tr>
+        <tr><td>Runtime Architecture</td><td><strong>@System.Runtime.InteropServices.RuntimeInformation.OSArchitecture</strong></td></tr>
+    </table>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - ServerStats - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>

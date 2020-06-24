@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "r5HfHcELZI3+JgVbQwgPMoqU4HQ51w0dqH2z2RBeU2IjNNIb65rsdqLzWDXidzwXwXfbGsvx5xB98zQsk6jNeg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Aditya N\\OneDrive\\Documents\\VS Workplace\\dotnetX86 sdk\\ServerStatsx86\\ServerStatsx86.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Aditya N\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.8\\microsoft.visualstudio.azure.containers.tools.targets.1.10.8.nupkg.sha512"
+  ],
+  "logs": []
+}
